@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Yellow column: Write task -->
+    <div class="column yellow">
+      <h2>Write Notes</h2>
+      <input type="text" id="taskInput" placeholder="Write a task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Blue column: Pending tasks -->
+    <div class="column blue">
+      <h2>Pending Tasks</h2>
+      <div id="pendingList"></div>
+    </div>
+
+    <!-- Red column: Completed tasks -->
+    <div class="column red">
+      <h2>Completed</h2>
+      <div id="completedList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

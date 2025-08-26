@@ -1,0 +1,107 @@
+/* ---------- Home Page (index.html) ---------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: lightyellow;
+}
+
+/* Heading on home page */
+h1 {
+  font-size: 40px;
+  color: darkblue;
+  margin-top: 100px;
+}
+
+/* Start button */
+button {
+  background-color: darkblue;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: navy;
+}
+
+/* ---------- To-Do Page (todo.html) ---------- */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  color: #333;
+  overflow-y: auto;
+}
+
+.yellow {
+  background-color: #F3D250;
+}
+
+.blue {
+  background-color: #90CCF4;
+}
+
+.red {
+  background-color: #F78888;
+}
+
+.column h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.column button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.task {
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+button.delete {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+}
