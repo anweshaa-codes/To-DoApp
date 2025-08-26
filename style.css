@@ -1,4 +1,4 @@
-/* ---------- Home Page (index.html) ---------- */
+/*(index.html) */
 
 body {
   margin: 0;
@@ -8,7 +8,7 @@ body {
   background-color: lightyellow;
 }
 
-/* Heading on home page */
+/* Heading(home page) */
 h1 {
   font-size: 40px;
   color: darkblue;
@@ -31,7 +31,7 @@ button:hover {
   background-color: navy;
 }
 
-/* ---------- To-Do Page (todo.html) ---------- */
+/*todo.html*/
 
 .container {
   display: flex;
@@ -105,3 +105,4 @@ button.delete {
   color: red;
   cursor: pointer;
 }
+
