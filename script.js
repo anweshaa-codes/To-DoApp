@@ -1,9 +1,9 @@
-// On home page: Start button action
+//Start button
 function goToTodo() {
   window.location.href = "todo.html";
 }
 
-// On to-do page: Add new task
+//Add new task
 function addTask() {
   const taskInput = document.getElementById('taskInput');
   const taskText = taskInput.value.trim();
@@ -15,14 +15,12 @@ function addTask() {
   taskInput.value = "";
 }
 
-// Create a task box with text and delete button
+// text and delete button
 function createTaskElement(text, isDone) {
   const task = document.createElement('div');
   task.className = 'task';
-  task.innerHTML = `
-    <span>${text}</span>
-    <button class="delete" onclick="deleteTask(this)">✕</button>
-  `;
+  task.innerHTML = `<span>${text}</span>
+    <button class="delete" onclick="deleteTask(this)">✕</button>`;
 
   if (!isDone) {
     task.onclick = function (e) {
@@ -38,7 +36,7 @@ function createTaskElement(text, isDone) {
   return task;
 }
 
-// Mark task as done
+// Marks task as done
 function markAsDone(task) {
   task.onclick = null;
   task.style.textDecoration = "line-through";
@@ -47,14 +45,14 @@ function markAsDone(task) {
   saveTasks();
 }
 
-// Delete task from list
+// Deletes task from list
 function deleteTask(button) {
   const task = button.parentElement;
   task.remove();
   saveTasks();
 }
 
-// Save tasks in local storage
+// Saves tasks in local storage
 function saveTasks() {
   const pending = [];
   document.querySelectorAll('#pendingList .task span').forEach(span => {
@@ -70,7 +68,7 @@ function saveTasks() {
   localStorage.setItem("completedTasks", JSON.stringify(completed));
 }
 
-// Load saved tasks when page opens
+// Loads saved tasks when page opens
 window.onload = function () {
   if (window.location.pathname.includes("todo.html")) {
     const pending = JSON.parse(localStorage.getItem("pendingTasks")) || [];
@@ -87,3 +85,4 @@ window.onload = function () {
     });
   }
 };
+
